@@ -1,5 +1,8 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    background-color: #f5f5f5;
+    color: #333;
     margin: 0;
     padding: 0;
 }
@@ -11,6 +14,7 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
 .logo {
@@ -26,14 +30,33 @@ nav ul {
 nav a {
     color: white;
     text-decoration: none;
+    font-weight: 500;
+    padding-bottom: 2px;
+    border-bottom: 2px solid transparent;
+    transition: border-color 0.3s;
 }
+
+nav a:hover {
+    border-bottom: 2px solid white;
 
 .hero {
     text-align: center;
-    padding: 2rem;
-    background-color: #e0f2f1;
+    padding: 4rem 2rem;
+    background: linear-gradient(135deg, #e0f2f1, #ffffff);
+    color: #004d40;
 }
 
+    .hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+    .hero p {
+    font-size: 1.2rem;
+    max-width: 600px;
+    margin: 0 auto;
+}
+    
 .btn {
     display: inline-block;
     margin-top: 1rem;
