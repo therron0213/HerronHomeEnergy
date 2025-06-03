@@ -1,3 +1,4 @@
+/* Base Body Styles with Background */
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     line-height: 1.6;
@@ -9,8 +10,28 @@ body {
     background-repeat: no-repeat;
     background-attachment: fixed;
     color: #fff; /* Text color for readability */
+    position: relative;
 }
 
+/* Dark Overlay for Contrast */
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Adjust for lighter/darker */
+    z-index: -1;
+}
+
+/* Ensure content is above the overlay */
+main, header, footer {
+    position: relative;
+    z-index: 1;
+}
+
+/* Header Styles */
 header {
     background: #004d40;
     color: white;
@@ -21,10 +42,12 @@ header {
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
+/* Logo Size */
 .logo {
     height: 50px;
 }
 
+/* Navigation */
 nav ul {
     list-style: none;
     display: flex;
@@ -46,10 +69,11 @@ nav a:hover {
     border-bottom: 2px solid white;
 }
 
+/* Hero Section with Background Contrast */
 .hero {
     text-align: center;
     padding: 4rem 2rem;
-    background: rgba(0, 0, 0, 0.5); /* Overlay for better contrast */
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
     color: white;
 }
 
@@ -64,6 +88,7 @@ nav a:hover {
     margin: 0 auto;
 }
 
+/* Button Styling */
 .btn {
     background: #00796b;
     color: white;
@@ -80,6 +105,15 @@ nav a:hover {
     background: #004d40;
 }
 
+/* Services Section (if needed) */
+.services {
+    text-align: center;
+    padding: 2rem;
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+}
+
+/* Footer */
 footer {
     background: #004d40;
     color: white;
